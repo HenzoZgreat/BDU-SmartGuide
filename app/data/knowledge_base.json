@@ -8,5 +8,30 @@
     ],
     "dont": ["Do not delay more than 3 days"],
     "office": "Student Affairs Office"
+  },
+  "course_add_drop": {
+    "keywords": ["add course", "drop course", "change course"],
+    "steps": [
+      "Check add/drop deadline",
+      "Get add/drop form from Registrar",
+      "Get approval from your advisor",
+      "Submit form to Registrar",
+      "Confirm changes in system"
+    ],
+    "dont": ["Do not miss deadline", "Do not add courses without approval"],
+    "office": "Registrar Office"
+  },
+
+  "lost_password_portal": {
+    "keywords": ["forgot password", "portal login issue"],
+    "steps": [
+      "Go to ICT support office",
+      "Provide your student ID",
+      "Request password reset",
+      "Receive temporary password",
+      "Login and change password immediately"
+    ],
+    "dont": ["Do not share your password", "Do not use weak passwords"],
+    "office": "ICT Support Office"
   }
 }
