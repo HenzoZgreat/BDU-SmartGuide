@@ -65,6 +65,51 @@
       "Do not submit complaint without evidence"
     ],
     "office": "Department Office"
+  } , 
+  
+  "garbage_and_donation_box_misuse": {
+    "keywords": ["ጣይት", "garbage", "donation box", "ካርቶን", "carton", "cleaner", "threw away", "ቆሻሻ", "clothes donation"],
+    "steps": [
+      "Clearly label donation boxes as 'Not Garbage'",
+      "Inform all cleaning staff about donation box locations",
+      "Report if a donation box is emptied as trash",
+      "Request locked or monitored donation boxes"
+    ],
+    "dont": [
+      "Do not put actual garbage in donation boxes",
+      "Do not assume cleaners know the purpose"
+    ],
+    "office": "Student Union Charity Sector (Office 03)"
+  },
+
+  "classroom_bathroom_smell_and_access": {
+    "keywords": ["ግዮን ህንፃ", "Giyon building", "bathroom smell", "ሽታ", "locked", "4th floor", "Poly", "urine", "clean"],
+    "steps": [
+      "Report the specific floor and building to maintenance",
+      "Request regular cleaning schedule for academic buildings",
+      "Ask for bathrooms to be unlocked during class hours",
+      "Complain to the department head if recurring"
+    ],
+    "dont": [
+      "Do not use locked bathrooms (find alternative)",
+      "Do not ignore foul smells - report immediately"
+    ],
+    "office": "Building Maintenance or Department Office"
+  },
+
+  "exam_phone_security": {
+    "keywords": ["ፈተና", "exam", "ስልክ", "phone", "theft", "ዘረፋ", "responsibility", "dorm door", "locker repair"],
+    "steps": [
+      "Ask exam proctors for a phone collection table at exam hall entrance",
+      "Request secure storage in the dormitory during exam hours",
+      "Do not bring valuables to exam hall if no storage is provided",
+      "Lodge a formal complaint if phones are stolen from designated areas"
+    ],
+    "dont": [
+      "Do not leave phone in an unlocked locker",
+      "Do not bring phone into exam hall if prohibited"
+    ],
+    "office": "Exam Coordination Office or Student Union"
   },
   "clearance_process": {
     "keywords": [
@@ -101,5 +146,7 @@
       "Do not forget payment receipt"
     ],
     "office": "Registrar Office"
+
   }
+
 }
