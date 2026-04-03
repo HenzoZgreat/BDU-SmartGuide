@@ -8,6 +8,7 @@
     ],
     "dont": ["Do not delay more than 3 days"],
     "office": "Student Affairs Office"
+<<<<<<< henok
   },
   "course_add_drop": {
     "keywords": ["add course", "drop course", "change course"],
@@ -33,5 +34,39 @@
     ],
     "dont": ["Do not share your password", "Do not use weak passwords"],
     "office": "ICT Support Office"
+=======
+  } ,
+  
+  "missed_registration": {
+    "keywords": ["missed registration", "late registration"],
+    "steps": [
+      "Go to the Registrar Office immediately",
+      "Explain your reason for missing registration",
+      "Fill late registration request form",
+      "Pay penalty fee if approved",
+      "Complete course registration"
+    ],
+    "dont": [
+      "Do not ignore deadlines",
+      "Do not wait until semester progresses too far"
+    ],
+    "office": "Registrar Office"
+  },
+
+  "grade_complaint": {
+    "keywords": ["grade complaint", "wrong grade", "grade issue"],
+    "steps": [
+      "Contact your course instructor first",
+      "Request grade clarification",
+      "If unresolved, go to Department Head",
+      "Submit formal complaint form",
+      "Wait for review decision"
+    ],
+    "dont": [
+      "Do not skip instructor discussion",
+      "Do not submit complaint without evidence"
+    ],
+    "office": "Department Office"
+>>>>>>> main
   }
 }
