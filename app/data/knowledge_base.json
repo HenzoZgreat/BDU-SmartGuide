@@ -76,5 +76,131 @@
       "Do not forget payment receipt"
     ],
     "office": "Registrar Office"
+  },
+  "library_noise_disruption": {
+    "keywords": ["library", "noise", "disruptive", "librarians", "quiet", "study", "chatter", "escape dormitories"],
+    "steps": [
+      "Report the specific time and librarian names to the Student Union office (Block 04)",
+      "Submit a written complaint to the Library Administration",
+      "Request designated silent zones in the library",
+      "Follow up with the Student Union if no response within 3 days"
+    ],
+    "dont": [
+      "Do not confront librarians directly",
+      "Do not ignore the issue during exam preparation"
+    ],
+    "office": "Student Union Office (Block 04) or Library Administration"
+  },
+  "dormitory_water_supply": {
+    "keywords": ["weha", "water", "24 hr", "block", "shower", "ቧቧ", "pipe", "selale", "tap", "water interruption"],
+    "steps": [
+      "Identify the specific block and floor with water shortage",
+      "Report to the Student Union office (Block 04) with details",
+      "Request 24-hour water supply for affected blocks",
+      "If unresolved, file a complaint at the Campus Administration Office"
+    ],
+    "dont": [
+      "Do not assume all blocks have the same issue",
+      "Do not wait for others to report"
+    ],
+    "office": "Student Union Office (Block 04)"
+  },
+  "laundry_and_washing_facilities": {
+    "keywords": ["ልብስ ማጠቢያ", "laundry", "washing", "ቧንቧ", "pipe not working", "water release", "women only", "clothes lines"],
+    "steps": [
+      "Document the non-functioning taps and pipes",
+      "Report to dormitory administration or Student Union",
+      "Request equal access to washing facilities for all genders",
+      "Ask for repair of broken water pipes and additional clotheslines"
+    ],
+    "dont": [
+      "Do not remove others' clothes without permission",
+      "Do not damage facilities further"
+    ],
+    "office": "Dormitory Administration or Student Union Office"
+  },
+  "library_closed_during_exams": {
+    "keywords": ["library", "closed", "ዝግ", "exam time", "2:40", "no staff", "why not open", "ፈተና"],
+    "steps": [
+      "Check library posted hours immediately",
+      "Report closure during exam hours to Student Union",
+      "Request extended exam-time hours from library management",
+      "Organize a petition if repeated issue"
+    ],
+    "dont": [
+      "Do not assume it will open later",
+      "Do not wait until exams are over to complain"
+    ],
+    "office": "Library Administration or Student Union Office"
+  },
+  "cafeteria_food_quality": {
+    "keywords": ["ዘይት", "oil", "ያልበሰለ ምግብ", "uncooked food", "ደረቀ ዳቦ", "dry bread", "ወጥ", "stew", "ክክ", "shiro", "bread baking"],
+    "steps": [
+      "Take a photo of the poor quality food",
+      "Report to the Cafeteria Committee or Student Union",
+      "Request inspection of kitchen and ingredients",
+      "Ask for a weekly food quality report"
+    ],
+    "dont": [
+      "Do not throw food without evidence",
+      "Do not blame individual workers without proof"
+    ],
+    "office": "Student Union Office (Cafeteria Committee)"
+  },
+  "dormitory_locker_repair_timing": {
+    "keywords": ["locker", "ቁልፍ", "key", "ጥገና", "repair", "exam time", "phone security", "ስልክ", "dorm room", "ቆልፍ"],
+    "steps": [
+      "Ask the Student Union to reschedule repairs after exams",
+      "Request alternative secure storage for phones/laptops during repair",
+      "Be present in your room during scheduled repair hours",
+      "Report any missing items immediately to Block 04"
+    ],
+    "dont": [
+      "Do not leave valuables unattended during repair",
+      "Do not skip being present if warned in advance"
+    ],
+    "office": "Student Union Office (Block 04)"
+  },
+  "library_charger_and_pc_issues": {
+    "keywords": ["library", "charger", "PC", "digital charger", "computer", "power", "charge laptop"],
+    "steps": [
+      "Ask library staff for available chargers at the desk",
+      "Report missing or broken chargers to library administration",
+      "Request a sign-out system for chargers",
+      "Consider bringing your own backup charger"
+    ],
+    "dont": [
+      "Do not take chargers from other students",
+      "Do not leave chargers unattended"
+    ],
+    "office": "Library Administration"
+  },
+  "dormitory_shower_and_bathroom_lighting": {
+    "keywords": ["shower", "ቧቧ", "pipe", "ሽንት ቤት", "toilet", "light", "መብራት", "water", "block", "በመታ", "night"],
+    "steps": [
+      "Note the specific block, floor, and bathroom number",
+      "Report to dormitory maintenance or Student Union",
+      "Request 24-hour water and working lights",
+      "Follow up weekly until resolved"
+    ],
+    "dont": [
+      "Do not use the bathroom if it's hazardous",
+      "Do not attempt electrical repairs yourself"
+    ],
+    "office": "Dormitory Maintenance or Student Union Office"
+  },
+  "campus_gate_entry_hour": {
+    "keywords": ["ግቢ መግቢያ", "gate", "entry time", "2:30", "night entry", "campus access", "በር"],
+    "steps": [
+      "Propose a specific extended hour (e.g., 2:30 AM) to the Student Union",
+      "Gather signatures from fellow students",
+      "Submit request to Campus Security Office",
+      "Request temporary extension during exam periods"
+    ],
+    "dont": [
+      "Do not climb gates or force entry",
+      "Do not violate existing curfew without permission"
+    ],
+    "office": "Campus Security Office or Student Union"
   }
 }
