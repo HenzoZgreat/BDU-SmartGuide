@@ -40,5 +40,41 @@
       "Do not submit complaint without evidence"
     ],
     "office": "Department Office"
+  },
+  "clearance_process": {
+    "keywords": [
+      "clearance",
+      "graduate clearance"
+    ],
+    "steps": [
+      "Collect clearance form from Registrar",
+      "Visit all required offices (Library, Dorm, Finance)",
+      "Get signatures from each office",
+      "Submit completed form to Registrar",
+      "Wait for final approval"
+    ],
+    "dont": [
+      "Do not miss any required office",
+      "Do not submit incomplete forms"
+    ],
+    "office": "Registrar Office"
+  },
+  "transcript_request": {
+    "keywords": [
+      "transcript",
+      "academic record"
+    ],
+    "steps": [
+      "Go to Registrar Office",
+      "Fill transcript request form",
+      "Specify number of copies",
+      "Pay required fee",
+      "Collect transcript after processing"
+    ],
+    "dont": [
+      "Do not provide incorrect personal details",
+      "Do not forget payment receipt"
+    ],
+    "office": "Registrar Office"
   }
 }
