@@ -1,0 +1,12 @@
+{
+  "lost_id": {
+    "keywords": ["lost id", "id missing"],
+    "steps": [
+      "Go to student affairs office",
+      "Bring 2 passport photos",
+      "Pay replacement fee"
+    ],
+    "dont": ["Do not delay more than 3 days"],
+    "office": "Student Affairs Office"
+  }
+}

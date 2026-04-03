@@ -1,0 +1,43 @@
+# 🔐 Environment variables
+.env
+
+# 🐍 Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 📦 Virtual environment
+venv/
+env/
+ENV/
+
+# 🧪 Testing / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 🧾 Logs
+*.log
+
+# 🧠 IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 🗂️ OS files
+.DS_Store
+Thumbs.db
+
+# 📦 Build / distribution
+build/
+dist/
+*.egg-info/
+
+# 🔄 Uvicorn / FastAPI
+*.pid
+
+# 🧪 Temporary files
+*.tmp
+*.bak
+
