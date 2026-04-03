@@ -8,6 +8,31 @@
     ],
     "dont": ["Do not delay more than 3 days"],
     "office": "Student Affairs Office"
+  },
+  "course_add_drop": {
+    "keywords": ["add course", "drop course", "change course"],
+    "steps": [
+      "Check add/drop deadline",
+      "Get add/drop form from Registrar",
+      "Get approval from your advisor",
+      "Submit form to Registrar",
+      "Confirm changes in system"
+    ],
+    "dont": ["Do not miss deadline", "Do not add courses without approval"],
+    "office": "Registrar Office"
+  },
+
+  "lost_password_portal": {
+    "keywords": ["forgot password", "portal login issue"],
+    "steps": [
+      "Go to ICT support office",
+      "Provide your student ID",
+      "Request password reset",
+      "Receive temporary password",
+      "Login and change password immediately"
+    ],
+    "dont": ["Do not share your password", "Do not use weak passwords"],
+    "office": "ICT Support Office"
   } ,
   
   "missed_registration": {
@@ -85,6 +110,43 @@
       "Do not bring phone into exam hall if prohibited"
     ],
     "office": "Exam Coordination Office or Student Union"
+  },
+  "clearance_process": {
+    "keywords": [
+      "clearance",
+      "graduate clearance"
+    ],
+    "steps": [
+      "Collect clearance form from Registrar",
+      "Visit all required offices (Library, Dorm, Finance)",
+      "Get signatures from each office",
+      "Submit completed form to Registrar",
+      "Wait for final approval"
+    ],
+    "dont": [
+      "Do not miss any required office",
+      "Do not submit incomplete forms"
+    ],
+    "office": "Registrar Office"
+  },
+  "transcript_request": {
+    "keywords": [
+      "transcript",
+      "academic record"
+    ],
+    "steps": [
+      "Go to Registrar Office",
+      "Fill transcript request form",
+      "Specify number of copies",
+      "Pay required fee",
+      "Collect transcript after processing"
+    ],
+    "dont": [
+      "Do not provide incorrect personal details",
+      "Do not forget payment receipt"
+    ],
+    "office": "Registrar Office"
+
   }
 
 }

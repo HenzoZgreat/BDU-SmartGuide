@@ -19,8 +19,8 @@ def classify_question(question: str) -> str:
     """
 
     response = client.chat.completions.create(
-        model="llama3-8b-8192",  # fast & free
-        messages=[{"role": "user", "content": prompt}],
-    )
+    model="llama-3.1-8b-instant",
+    messages=[{"role": "user", "content": prompt}],
+)
 
     return response.choices[0].message.content.strip()
