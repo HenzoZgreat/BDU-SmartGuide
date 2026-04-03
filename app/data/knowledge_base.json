@@ -158,5 +158,48 @@
       "Do not try to fix it yourself"
     ],
     "office": "Campus Maintenance Office"
+  }, "dead_animal_removal": {
+    "keywords": ["የሞተ ውሻ", "dead dog", "ውሃ ቦይ", "water channel", "puppy dead", "ሽታ", "stink", "የውሻ ግልገል"],
+    "steps": [
+      "Report exact location (e.g., near laboratory launch area) to Student Union immediately",
+      "Request sanitation team to remove carcass",
+      "If health hazard, contact campus clinic",
+      "Follow up within hours (not days) to avoid smell"
+    ],
+    "dont": [
+      "Do not touch the dead animal with bare hands",
+      "Do not wait for smell to worsen"
+    ],
+    "office": "Campus Sanitation / Student Union (urgent)"
+  },
+  
+  "id_scanner_photo_mismatch": {
+    "keywords": ["ስካነር ፎቶ አላሳየኝ", "scanner no photo", "system doesn't accept image", "የዛሬ ሶስት አመት ፎቶ", "old photo", "photo not matching"],
+    "steps": [
+      "Use the provided link (cutt.ly/id-problem) to submit a current photo",
+      "Ensure photo matches your current appearance",
+      "If system rejects, go to ID Office in person",
+      "Request manual update of photo in database"
+    ],
+    "dont": [
+      "Do not submit blurry or filtered photos",
+      "Do not use someone else's photo"
+    ],
+    "office": "ID Office / Student Union (for link assistance)"
+  },
+  
+  "non_cafe_charge_confusion": {
+    "keywords": ["non-cafe birr", "non-cafeteria", "asgebuln", "ያልበላነው ክፍያ", "extra charge", "unknown fee"],
+    "steps": [
+      "Ask Student Union for clarification on 'non-cafe birr'",
+      "Request an itemized breakdown of fees from Finance Office",
+      "If it's a mistaken charge, file a dispute with receipt",
+      "Do not pay without understanding the fee"
+    ],
+    "dont": [
+      "Do not ignore the charge (it may block registration)",
+      "Do not pay cash without receipt"
+    ],
+    "office": "Finance Office or Student Union"
   }
 }
