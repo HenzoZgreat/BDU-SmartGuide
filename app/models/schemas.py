@@ -12,3 +12,18 @@ class GuideResponse(BaseModel):
     
     # New field for friendly mode
     message: Optional[str] = None
+
+class RawDocumentRequest(BaseModel):
+    document_text: str
+
+class GenerateGuideResponse(BaseModel):
+    ids: List[str]
+    guides_count: int
+    status: str
+
+class UpdateGuideRequest(BaseModel):
+    title: str
+    steps: List[str]
+    dont: List[str]
+    office: str
+    keywords: List[str]
