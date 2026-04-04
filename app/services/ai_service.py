@@ -45,3 +45,45 @@ def classify_question(question: str) -> str:
     except Exception as e:
         print(f"⚠️ AI Classification Error: {e}")
         return "unknown"
+
+def extract_guide_from_document(raw_text: str) -> dict:
+    prompt = f"""
+    You are an expert technical writer, metadata extractor, and multi-lingual translator.
+    Your task is to analyze the following raw document text, break it down into DISTINCT topics/rulesets, translate everything perfectly into English if it is in another language, and extract structured guides.
+    
+    Convert the text into a JSON object with this exact structure containing an array of guides:
+    {{
+        "guides": [
+            {{
+                "title": "A short, concise title in English (max 5 words)",
+                "keywords": ["keyword1", "keyword2", "keyword3"],
+                "steps": ["Step 1 description in English...", "Step 2 description in English..."],
+                "dont": ["Do not...", "Avoid..."],
+                "office": "The specific office responsible, or 'N/A' if not mentioned"
+            }}
+        ]
+    }}
+    
+    Document text:
+    {raw_text}
+    
+    Rules:
+    - ALWAYS output ONLY valid JSON.
+    - Output an object containing a single key "guides" mapped to an ARRAY of guide objects.
+    - If the document contains multiple distinct topics or rulesets, split them into multiple guide objects inside the array.
+    - AUTOMATICALLY TRANSLATE all output content (titles, steps, donts, keywords) flawlessly into ENGLISH, no matter what the input language is.
+    - EXHAUSTIVELY extract EVERY single actionable rule, step, or requirement into the "steps" array. Do not skip or summarize rules. List them out point by point completely.
+    - EXHAUSTIVELY extract ALL warnings, restrictions, or negative instructions for the "dont" array.
+    """
+    try:
+        response = client.chat.completions.create(
+            model="llama-3.3-70b-versatile",  # More capable model for comprehensive extraction
+            messages=[{"role": "user", "content": prompt}],
+            response_format={"type": "json_object"},
+            temperature=0.2,
+        )
+        import json
+        return json.loads(response.choices[0].message.content)
+    except Exception as e:
+        print(f"⚠️ AI Guide Extraction Error: {e}")
+        raise e
