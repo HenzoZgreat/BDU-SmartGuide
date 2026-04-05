@@ -14,6 +14,9 @@ def get_categories() -> list[str]:
     docs = db.collection("guides").stream()
     return [doc.id for doc in docs]
 
+def clear_categories_cache():
+    get_categories.cache_clear()
+
 def classify_question(question: str) -> str:
     categories = get_categories()
     if not categories:
