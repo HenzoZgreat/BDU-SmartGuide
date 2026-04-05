@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 from fastapi import APIRouter, Query, HTTPException
 from app.models.schemas import QuestionRequest, GuideResponse, RawDocumentRequest, GenerateGuideResponse, UpdateGuideRequest
-from app.services.ai_service import classify_question, extract_guide_from_document
+from app.services.ai_service import classify_question, extract_guide_from_document, clear_categories_cache
 from app.services.guide_service import get_guide
 from app.core.firebase import get_db
 import re
@@ -94,6 +94,8 @@ def generate_guide(request: RawDocumentRequest):
             db.collection("guides").document(doc_id).set(guide)
             saved_ids.append(doc_id)
         
+        clear_categories_cache()
+        
         return GenerateGuideResponse(
             ids=saved_ids,
             guides_count=len(saved_ids),
@@ -117,6 +119,7 @@ def update_guide(guide_id: str, request: UpdateGuideRequest):
             "office": request.office,
             "keywords": request.keywords
         })
+        clear_categories_cache()
         return {"status": "success", "message": "Guide updated"}
     except HTTPException:
         raise
@@ -132,6 +135,7 @@ def delete_guide(guide_id: str):
             raise HTTPException(status_code=404, detail="Guide not found")
         
         doc_ref.delete()
+        clear_categories_cache()
         return {"status": "success", "message": "Guide deleted"}
     except HTTPException:
         raise

@@ -4,11 +4,15 @@ from groq import Groq
 # Use os.getenv directly, just like in ai_service.py
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
-def format_friendly_response(question: str, guide: dict) -> str:
+def format_friendly_response(question: str, guide: dict, language: str = "english") -> str:
     steps = "\n".join(f"• {step}" for step in guide.get("steps", []))
     donts = "\n".join(f"⚠️ {item}" for item in guide.get("dont", []))
     office = guide.get("office", "the relevant office")
     
+    amharic_instruction = ""
+    if language.lower() == "amharic":
+        amharic_instruction = "IMPORTANT: You MUST translate your entire final response perfectly into Amharic (አማርኛ). Do not output English."
+
     prompt = f"""
 You are BDU SmartGuide, a friendly, empathetic AI assistant for Bahir Dar University students.
 
@@ -23,15 +27,14 @@ Here is the official guidance:
 
 📍 Visit: {office}
 
-Please craft a warm, natural-language response that:
-1. Clearly explains the steps in conversational tone
-2. Gently weaves in the warnings
-3. Ends with 'If you need further assistance, please visit ' + mentions the office name
-4. Keeps it concise (3-5 short lines max)
-5. Uses emojis sparingly for warmth if needed
-6. Say something like "i dont know about the information you asked, please visit the student affairs office for help" if there is no category match or guide info, dont make up things or dont be vauge
+Please craft a warm, concise response that:
+1. Directly answers the student's question by summarizing the necessary steps.
+2. Mentions the exact office they need to visit ({office}).
+3. EXTREMELY IMPORTANT: Keep the response very short! Maximum of 2-3 concise sentences. Do not list long bullet points. Write it like a quick text message to a friend.
+4. If there are warnings to avoid, gently weave them in as a single short point.
+5. If there is no specific guide matched or you don't know the answer, just say: "I don't have that specific information, please visit the relevant office for help." Do not make things up.
 
-Write in clear, simple English.
+{amharic_instruction}
 """
     
     try:
@@ -39,11 +42,9 @@ Write in clear, simple English.
             model="llama-3.1-8b-instant",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.3,
-            max_tokens=500
+            max_tokens=300
         )
         return response.choices[0].message.content.strip()
     except Exception as e:
         print(f"⚠️ Friendly Response Error: {e}")
-        return f"I'm sorry you're dealing with this. Here's what to do:\n\n" \
-               f"{' '.join(guide.get('steps', []))}\n\n" \
-               f"Please visit: {office}. Avoid: {'; '.join(guide.get('dont', []))}"
+        return "I'm currently unable to process your request. Please visit your department office."

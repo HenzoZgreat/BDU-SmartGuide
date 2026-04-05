@@ -3,6 +3,7 @@ from typing import Optional, List
 
 class QuestionRequest(BaseModel):
     question: str
+    language: Optional[str] = "english"
 
 class GuideResponse(BaseModel):
     # Make original fields optional
