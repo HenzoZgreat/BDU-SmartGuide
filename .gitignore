@@ -41,6 +41,5 @@ dist/
 *.tmp
 *.bak
 
-# 🔐 Sensitive files
-firebase-key.json
+ 
 
